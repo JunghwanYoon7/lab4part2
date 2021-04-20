@@ -6,6 +6,11 @@
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/myStyle.css">
+    <style>        
+        .invert {
+            filter: invert(1);
+        }
+        </style>
 </head>
 <body>
 
@@ -27,6 +32,7 @@
                 <input type="email" class="form-control" id="email" placeholder="Enter email">
             </li>
         </ul>
+        <button onclick="invert()">Invert Page</button>
     </div>
 </nav>
 
@@ -122,6 +128,11 @@
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="app.js"></script>
-
+<script>
+    function invert() {
+       var element = document.body;
+       element.classList.toggle("invert");
+    }
+    </script>
 </body>
 </html>
